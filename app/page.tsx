@@ -1,5 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
+import {Metadata} from "next";
+
+export const metadata: Metadata = {
+    description: "Home Page for khraos.in",
+}
 
 export default function Home() {
   return (
