@@ -9,6 +9,9 @@ export const metadata: Metadata = {
         default: 'Home Page | Khraos',
     },
     metadataBase: new URL('https://khraos.in/'),
+    alternates: {
+        canonical: 'https://khraos.in/',
+    }
 }
 
 const geistSans = Geist({

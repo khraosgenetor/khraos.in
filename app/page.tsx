@@ -2,8 +2,23 @@ import Image from "next/image";
 import Link from "next/link";
 import {Metadata} from "next";
 
+const baseURL =
+    process.env.NODE_ENV === "development"
+        ? "http://localhost:3000"
+        : "https://khraos.in";
+
 export const metadata: Metadata = {
     description: "Home Page for khraos.in",
+    openGraph: {
+        images: [
+            {
+                url: `${baseURL}/api/og?title=Khraos Genetor | Home Page&description=The landing site for the portfolio of the man himself.`,
+                width: 1200,
+                height: 630,
+                alt: "Home Page",
+            }
+        ]
+    }
 }
 
 export default function Home() {
