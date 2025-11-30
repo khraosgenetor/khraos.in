@@ -2,9 +2,14 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import {useEffect} from "react";
 
 export default function NotFound() {
     const pathname = usePathname() || ''; // immutable hook value
+
+    useEffect(() => {
+        document.title = `${pathname} not found.`;
+    }, []);
 
     return (
         <div className="flex min-h-screen flex-col items-center justify-center bg-black text-white text-center p-4">
