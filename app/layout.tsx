@@ -3,6 +3,8 @@ import { SpeedInsights } from "@vercel/speed-insights/next"
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import {Metadata} from 'next';
+import { Provider as RollbarProvider } from '@rollbar/react';
+import {clientConfig} from "@/app/rollbar";
 
 export const metadata: Metadata = {
     title: {
@@ -31,14 +33,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
-      <Analytics />
-      <SpeedInsights />
-      </body>
-    </html>
+      <RollbarProvider config={clientConfig}>
+          <html lang="en">
+          <body
+            className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+          >
+            {children}
+          <Analytics />
+          <SpeedInsights />
+          </body>
+        </html>
+      </RollbarProvider>
   );
 }
