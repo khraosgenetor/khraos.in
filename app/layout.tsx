@@ -8,7 +8,7 @@ import {clientConfig} from "@/app/rollbar";
 
 export const metadata: Metadata = {
     title: {
-        template: '%s | Khraos',
+        template: '%s | Khraos Genetor',
         default: 'Home Page | Khraos',
     },
     metadataBase: new URL('https://khraos.in/'),

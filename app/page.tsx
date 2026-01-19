@@ -35,7 +35,7 @@ export default function Home() {
         />
           <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
               <h1 className="flex items-center gap-4 text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-                  <span>khraos.in is undergoing renovations.<br />Please stand by.</span>
+                  <span>khraos.in is being reprogrammed.<br />Please stand by.</span>
                   <div className="vertical-line right"></div>
                   <span>
                       <Image
