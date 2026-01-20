@@ -9,7 +9,7 @@ import {clientConfig} from "@/app/rollbar";
 export const metadata: Metadata = {
     title: {
         template: '%s | Khraos Genetor',
-        default: 'Home Page | Khraos',
+        default: 'Home Page | Khraos Genetor',
     },
     metadataBase: new URL('https://khraos.in/'),
     alternates: {
